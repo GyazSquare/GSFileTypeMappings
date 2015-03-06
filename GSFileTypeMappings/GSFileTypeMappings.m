@@ -22,6 +22,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
     NSLog(@"%s: MIMEType=%@", __PRETTY_FUNCTION__, MIMEType);
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)MIMEType, NULL);
     if (!UTI) {
+        NSLog(@"%s: UTI=NULL", __PRETTY_FUNCTION__);
         return nil;
     }
     CFArrayRef extensions;
@@ -46,6 +47,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
     NSLog(@"%s: MIMEType=%@", __PRETTY_FUNCTION__, MIMEType);
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)MIMEType, NULL);
     if (!UTI) {
+        NSLog(@"%s: UTI=NULL", __PRETTY_FUNCTION__);
         return nil;
     }
     CFStringRef extension = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassFilenameExtension);
@@ -58,6 +60,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
     NSLog(@"%s: extension=%@", __PRETTY_FUNCTION__, extension);
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)extension, NULL);
     if (!UTI) {
+        NSLog(@"%s: UTI=NULL", __PRETTY_FUNCTION__);
         return nil;
     }
     CFStringRef MIMEType = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType);
