@@ -32,45 +32,45 @@
 
 - (void)testExtensionsForMIMEType {
     GSFileTypeMappings *sharedFileTypeMappings = [GSFileTypeMappings sharedFileTypeMappings];
-    // // nil
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings extensionsForMIMEType:nil]);
-    // }
-    // // empty string
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@""];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
-    // // type only
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
-    // // no subtype
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
-    // // no type
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"/plain"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
-    // // invalid type
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"textt/plain"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
-    // // invalid subtype
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/plainn"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
-    // // extra semicolon
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/plain;"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
+    // nil
+    {
+        XCTAssertNil([sharedFileTypeMappings extensionsForMIMEType:nil]);
+    }
+    // empty string
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@""];
+        XCTAssertEqualObjects(@[], extensions);
+    }
+    // type only
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
+    // no subtype
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
+    // no type
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"/plain"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
+    // invalid type
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"textt/plain"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
+    // invalid subtype
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/plainn"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
+    // extra semicolon
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/plain;"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
     // text/plain
     {
         NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"text/plain"];
@@ -116,11 +116,11 @@
         NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"video/mp4"];
         XCTAssertTrue([extensions containsObject:@"mp4"]);
     }
-    // // application/octet-stream
-    // {
-    //     NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"application/octet-stream"];
-    //     XCTAssertEqualObjects(@[], extensions);
-    // }
+    // application/octet-stream
+    {
+        NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"application/octet-stream"];
+        XCTAssertEqualObjects(@[], extensions);
+    }
     // application/pdf
     {
         NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"application/pdf"];
@@ -130,38 +130,38 @@
 
 - (void)testPreferredExtensionForMIMEType {
     GSFileTypeMappings *sharedFileTypeMappings = [GSFileTypeMappings sharedFileTypeMappings];
-    // // nil
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:nil]);
-    // }
-    // // empty string
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@""]);
-    // }
-    // // type only
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text"]);
-    // }
-    // // no subtype
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/"]);
-    // }
-    // // no type
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"/plain"]);
-    // }
-    // // invalid type
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"textt/plain"]);
-    // }
-    // // invalid subtype
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plainn"]);
-    // }
-    // // extra semicolon
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plain;"]);
-    // }
+    // nil
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:nil]);
+    }
+    // empty string
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@""]);
+    }
+    // type only
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text"]);
+    }
+    // no subtype
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/"]);
+    }
+    // no type
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"/plain"]);
+    }
+    // invalid type
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"textt/plain"]);
+    }
+    // invalid subtype
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plainn"]);
+    }
+    // extra semicolon
+    {
+        XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plain;"]);
+    }
     // text/plain
     {
         XCTAssertEqualObjects(@"txt", [sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plain"]);
@@ -210,18 +210,18 @@
 
 - (void)testMIMETypeForExtension {
     GSFileTypeMappings *sharedFileTypeMappings = [GSFileTypeMappings sharedFileTypeMappings];
-    // // nil
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:nil]);
-    // }
-    // // empty string
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:@""]);
-    // }
-    // // invalid extension
-    // {
-    //     XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:@"foo"]);
-    // }
+    // nil
+    {
+        XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:nil]);
+    }
+    // empty string
+    {
+        XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:@""]);
+    }
+    // invalid extension
+    {
+        XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:@"foo"]);
+    }
     // txt
     {
         XCTAssertEqualObjects(@"text/plain", [sharedFileTypeMappings MIMETypeForExtension:@"txt"]);
