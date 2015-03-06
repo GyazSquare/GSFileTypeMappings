@@ -16,6 +16,13 @@
 
 @implementation GSFileTypeMappings
 
++ (void)initialize {
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, CFSTR("txt"), NULL);
+    if (UTI) {
+        CFRelease(UTI);
+    }
+}
+
 GSSynthesizeSingleton(GS, FileTypeMappings);
 
 - (NSArray *)extensionsForMIMEType:(NSString *)MIMEType {
