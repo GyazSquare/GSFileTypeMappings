@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '3.0'
   s.osx.deployment_target = '10.6'
   s.dependency 'GSSynthesizeSingleton'
-  s.requires_arc = true
-  s.source_files = 'GSFileTypeMappings/*.{h,m}'
+  s.requires_arc  = true
+  s.ios.framework = 'MobileCoreServices'
+  s.source_files  = 'GSFileTypeMappings/*.{h,m}'
 end
