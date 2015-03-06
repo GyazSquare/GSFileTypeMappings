@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: GSFileTypeMappings.xcodeproj
+xcode_scheme: GSFileTypeMappings
+xcode_sdk: iphonesimulator
