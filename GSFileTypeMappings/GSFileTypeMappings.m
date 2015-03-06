@@ -19,7 +19,7 @@
 GSSynthesizeSingleton(GS, FileTypeMappings);
 
 - (NSArray *)extensionsForMIMEType:(NSString *)MIMEType {
-    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)[MIMEType uppercaseString], NULL);
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)MIMEType, NULL);
     if (!UTI) {
         return nil;
     }
@@ -41,7 +41,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
 }
 
 - (NSString *)preferredExtensionForMIMEType:(NSString *)MIMEType {
-    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)[MIMEType uppercaseString], NULL);
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)MIMEType, NULL);
     if (!UTI) {
         return nil;
     }
@@ -51,7 +51,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
 }
 
 - (NSString *)MIMETypeForExtension:(NSString *)extension {
-    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[extension uppercaseString], NULL);
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)extension, NULL);
     if (!UTI) {
         return nil;
     }

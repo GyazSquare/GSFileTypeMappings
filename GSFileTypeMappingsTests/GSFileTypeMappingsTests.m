@@ -162,6 +162,10 @@
     {
         XCTAssertNil([sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plain;"]);
     }
+    // TEXT/PLAIN (uppercase)
+    {
+        XCTAssertEqualObjects(@"txt", [sharedFileTypeMappings preferredExtensionForMIMEType:@"TEXT/PLAIN"]);
+    }
     // text/plain
     {
         XCTAssertEqualObjects(@"txt", [sharedFileTypeMappings preferredExtensionForMIMEType:@"text/plain"]);
@@ -221,6 +225,10 @@
     // invalid extension
     {
         XCTAssertNil([sharedFileTypeMappings MIMETypeForExtension:@"foo"]);
+    }
+    // TXT (uppercase)
+    {
+        XCTAssertEqualObjects(@"text/plain", [sharedFileTypeMappings MIMETypeForExtension:@"TXT"]);
     }
     // txt
     {
