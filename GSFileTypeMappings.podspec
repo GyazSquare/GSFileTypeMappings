@@ -11,6 +11,5 @@ Pod::Spec.new do |s|
   s.dependency 'GSSynthesizeSingleton'
   s.requires_arc  = true
   s.ios.framework = 'MobileCoreServices'
-  s.osx.framework = 'CoreServices'
   s.source_files  = 'GSFileTypeMappings/*.{h,m}'
 end
