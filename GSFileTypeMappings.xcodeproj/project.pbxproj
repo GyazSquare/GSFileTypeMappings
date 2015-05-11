@@ -119,7 +119,8 @@
 			children = (
 				D75B08681AA885B80011B798 /* GSSynthesizeSingleton.h */,
 			);
-			path = GSSynthesizeSingleton;
+			name = GSSynthesizeSingleton;
+			path = GSSynthesizeSingleton/GSSynthesizeSingleton;
 			sourceTree = SOURCE_ROOT;
 		};
 		D77877081A2B3DB700172318 /* Frameworks */ = {

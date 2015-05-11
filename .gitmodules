@@ -1,0 +1,3 @@
+[submodule "GSSynthesizeSingleton"]
+	path = GSSynthesizeSingleton
+	url = https://github.com/GyazSquare/GSSynthesizeSingleton.git
