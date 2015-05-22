@@ -7,7 +7,6 @@
 
 @class NSArray, NSString;
 
-NS_CLASS_AVAILABLE(10_6, 3_0)
 @interface GSFileTypeMappings : NSObject
 
 + (instancetype)sharedFileTypeMappings;
