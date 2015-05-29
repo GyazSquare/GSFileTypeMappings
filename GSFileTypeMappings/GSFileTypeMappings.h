@@ -5,14 +5,18 @@
 
 @import Foundation.NSObject;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class NSArray, NSString;
 
 @interface GSFileTypeMappings : NSObject
 
 + (instancetype)sharedFileTypeMappings;
 
-- (NSArray *)extensionsForMIMEType:(NSString *)MIMEType;
-- (NSString *)preferredExtensionForMIMEType:(NSString *)MIMEType;
-- (NSString *)MIMETypeForExtension:(NSString *)extension;
+- (nullable NSArray *)extensionsForMIMEType:(nullable NSString *)MIMEType;
+- (nullable NSString *)preferredExtensionForMIMEType:(nullable NSString *)MIMEType;
+- (nullable NSString *)MIMETypeForExtension:(nullable NSString *)extension;
 
 @end
+
+NS_ASSUME_NONNULL_END
