@@ -18,7 +18,7 @@
 
 GSSynthesizeSingleton(GS, FileTypeMappings);
 
-- (NSArray *)extensionsForMIMEType:(NSString *)MIMEType {
+- (nullable NSArray *)extensionsForMIMEType:(nullable NSString *)MIMEType {
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)MIMEType, NULL);
     if (!UTI) {
         return nil;
@@ -40,7 +40,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
     return (__bridge_transfer NSArray *)extensions;
 }
 
-- (NSString *)preferredExtensionForMIMEType:(NSString *)MIMEType {
+- (nullable NSString *)preferredExtensionForMIMEType:(nullable NSString *)MIMEType {
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)MIMEType, NULL);
     if (!UTI) {
         return nil;
@@ -50,7 +50,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
     return (__bridge_transfer NSString *)extension;
 }
 
-- (NSString *)MIMETypeForExtension:(NSString *)extension {
+- (nullable NSString *)MIMETypeForExtension:(nullable NSString *)extension {
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)extension, NULL);
     if (!UTI) {
         return nil;
