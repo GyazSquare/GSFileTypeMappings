@@ -33,7 +33,7 @@ $ pod install
 Check out the source, including all the dependencies:
 
 ```sh
-git clone --recurse-submodules https://github.com/GyazSquare/GSFileTypeMappings.git
+$ git clone --recurse-submodules https://github.com/GyazSquare/GSFileTypeMappings.git
 ```
 
 ## License
