@@ -2,13 +2,13 @@ GSFileTypeMappings
 ==================
 [![Build Status](https://travis-ci.org/GyazSquare/GSFileTypeMappings.svg?branch=master)](https://travis-ci.org/GyazSquare/GSFileTypeMappings)
 
-GSFileTypeMappings is a simple Objective-C library for iOS and OS X, which converts between a filename extension and a MIME type.
+GSFileTypeMappings is a simple Objective-C library for iOS, OS X and watchOS, which converts between a filename extension and a MIME type.
 
 ## Requirements
 
-* Xcode 6.3 or later
-* Base SDK: iOS 8.3 / OS X 10.10 or later
-* Deployment Target: iOS 5.0 / OS X 10.6 or later
+* Xcode 7 or later
+* Base SDK: iOS 9.0 / OS X 10.11 / watchOS 2.0  or later
+* Deployment Target: iOS 5.0 / OS X 10.6 / watchOS 2.0 or later
 
 ## Installation
 
@@ -24,7 +24,7 @@ pod 'GSFileTypeMappings'
 
 Install the pod:
 
-```sh
+```shell
 $ pod install
 ```
 
@@ -32,7 +32,7 @@ $ pod install
 
 Check out the source, including all the dependencies:
 
-```sh
+```shell
 $ git clone --recurse-submodules https://github.com/GyazSquare/GSFileTypeMappings.git
 ```
 
