@@ -24,9 +24,12 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
         return nil;
     }
     CFArrayRef extensions;
+#if !TARGET_OS_WATCH
     if (UTTypeCopyAllTagsWithClass) {
+#endif
         // OS X 10.10 / iOS 8.0 / watchOS 2 or later
         extensions = UTTypeCopyAllTagsWithClass(UTI, kUTTagClassFilenameExtension);
+#if !TARGET_OS_WATCH
     } else {
         // OS X 10.9.x / iOS 7.x or earlier
         CFStringRef extension = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassFilenameExtension);
@@ -36,6 +39,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
             CFRelease(extension);
         }
     }
+#endif
     CFRelease(UTI);
     return (__bridge_transfer NSArray *)extensions;
 }
