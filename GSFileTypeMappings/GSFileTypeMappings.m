@@ -28,7 +28,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
         // OS X 10.10 / iOS 8.0 / watchOS 2 or later
         extensions = UTTypeCopyAllTagsWithClass(UTI, kUTTagClassFilenameExtension);
     } else {
-        // OS X 10.9.x / iOS 7.x / watchOS 1 or earlier
+        // OS X 10.9.x / iOS 7.x or earlier
         CFStringRef extension = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassFilenameExtension);
         CFIndex numValues = extension ? 1 : 0;
         extensions = CFArrayCreate(NULL, (void *)&extension, numValues, &kCFTypeArrayCallBacks);
