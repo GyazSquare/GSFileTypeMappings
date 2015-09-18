@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedFileTypeMappings;
 
-- (nullable NSArray *)extensionsForMIMEType:(nullable NSString *)MIMEType;
+- (nullable NSArray<NSString *> *)extensionsForMIMEType:(nullable NSString *)MIMEType;
 - (nullable NSString *)preferredExtensionForMIMEType:(nullable NSString *)MIMEType;
 - (nullable NSString *)MIMETypeForExtension:(nullable NSString *)extension;
 
