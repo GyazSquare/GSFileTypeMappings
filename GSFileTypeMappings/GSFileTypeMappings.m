@@ -39,7 +39,7 @@ GSSynthesizeSingleton(GS, FileTypeMappings);
         }
     }
     CFRelease(UTI);
-    return (__bridge_transfer NSArray *)extensions;
+    return ((__bridge_transfer NSArray *)extensions ?: @[]);
 }
 
 - (nullable NSString *)preferredExtensionForMIMEType:(nullable NSString *)MIMEType {
